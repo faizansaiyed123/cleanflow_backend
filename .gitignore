@@ -1,0 +1,30 @@
+# Local environment and secrets
+.env
+
+# Python cache and test output
+__pycache__/
+*.py[cod]
+.pytest_cache/
+coverage/
+
+# JavaScript dependencies and build output
+node_modules/
+dist/
+build/
+
+# Browser and end-to-end test output
+playwright-report/
+test-results/
+
+# Logs and temporary files
+logs/
+*.log
+tmp/
+*.tmp
+*.bak
+*.orig
+.DS_Store
+
+# Runtime upload data (retain the directory placeholder)
+storage/uploads/*
+!storage/uploads/.gitkeep
