@@ -142,6 +142,8 @@ async def stream_notifications(token: str):
     return StreamingResponse(event_generator(), media_type="text/event-stream", headers={
         "Cache-Control": "no-cache", "X-Accel-Buffering": "no",
     })
+
+@router.post("/mark-all-read")
 def mark_all_read(db: Session = Depends(get_db), current_user: User = Depends(get_current_user)):
     (db.query(Notification)
      .filter(Notification.user_id == current_user.id, Notification.is_read.is_(False))
